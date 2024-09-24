@@ -78,7 +78,7 @@ Your directory structure should look something like this:
 ```
 
 ## Usage
-- **Upload PDF**: When you open the app, you'll be prompted to upload a PDF file.
+- **Upload PDF**: When you open the app, you'll be prompted to upload a PDF file. Store the PDF file in `data` before uploading.
 - **Summarize**: Once uploaded, click the "Summarize" button to generate a summary of the document.
 - **View Results**: The app will display the PDF on one side and the summary on the other.
 
