@@ -14,12 +14,12 @@ Follow these steps to replicate the project in your local environment.
 ### Step 1: Clone the Repository
 
 Start by cloning the necessary model repository from Hugging Face:
-```python
+```bash
 git lfs install  # Ensure git-lfs is installed
 git clone https://huggingface.co/MBZUAI/LaMini-Flan-T5-248M
 ```
 If your network connection is slow, you might want to want to clone without large files (just their pointers). But keep in mind to manually download the skipped files:
-```python
+```bash
 GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/MBZUAI/LaMini-Flan-T5-248M
 ```
 Make sure that the LaMini-Flan-T5-248M directory is in the same folder as your project code.
@@ -27,7 +27,7 @@ Make sure that the LaMini-Flan-T5-248M directory is in the same folder as your p
 ### Step 2: Set up the Environment
 
 Create and activate a Python virtual environment using Conda (not a must, but recommended):
-```python
+```bash
 conda create -n myenv python=3.10
 conda activate myenv
 ```
@@ -37,24 +37,25 @@ conda activate myenv
 Install the necessary dependencies using conda and pip:
 
 #### Install with Conda:
-```python
+```bash
 conda install -c conda-forge langchain pytorch sentencepiece transformers accelerate pypdf
 ```
 
 #### Install the remaining packages with Pip:
-```python
+```bash
 pip install sentence-transformers chromadb tiktoken streamlit
 ```
 ### Step 4: Running the App
 
 Once all dependencies are installed, you can run the Streamlit app. Make sure the cloned `LaMini-Flan-T5-248M` model directory is in the same directory as your Streamlit script.
-```python
+```bash
 streamlit run streamlit_app.py
 ```
 ## Directory Structure
 
 Your directory structure should look something like this:
 ```plaintext
+.
 ├── LaMini-Flan-T5-248M
 │   ├── config.json
 │   ├── generation_config.json
@@ -69,14 +70,15 @@ Your directory structure should look something like this:
 │   └── (Uploaded PDF files will be saved here)
 └── README.md
 ```
+
 ## Usage
-- Upload PDF: When you open the app, you'll be prompted to upload a PDF file.
-- Summarize: Once uploaded, click the "Summarize" button to generate a summary of the document.
-- View Results: The app will display the PDF on one side and the summary on the other.
+- **Upload PDF**: When you open the app, you'll be prompted to upload a PDF file.
+- **Summarize**: Once uploaded, click the "Summarize" button to generate a summary of the document.
+- **View Results**: The app will display the PDF on one side and the summary on the other.
 
 ## Troubleshooting
-- Memory Issues: If you're running into memory issues (especially if you're using a GPU), you might need to configure the model loading options with offload_folder or use safetensors. This has been accounted for in the model loading code, but adjust as needed based on your hardware.
-- Offloading Model Weights: Ensure there is sufficient disk space if you're offloading parts of the model to disk.
+- **Memory Issues**: If you're running into memory issues (especially if you're using a GPU), you might need to configure the model loading options with offload_folder or use safetensors. This has been accounted for in the model loading code, but adjust as needed based on your hardware.
+- **Offloading Model Weights**: Ensure there is sufficient disk space if you're offloading parts of the model to disk.
 
 ## Future Improvements
 - Add more language models for experimentation.
@@ -84,6 +86,6 @@ Your directory structure should look something like this:
 - Allow users to select specific sections of the document for summarization.
 
 ## Credits
-- LangChain: For document loading and text splitting.
-- Hugging Face: For the LaMini-Flan-T5-248M language model.
-- Streamlit: For the front-end interface.
+- **LangChain**: For document loading and text splitting.
+- [**Mohamed Bin Zayed University of Artificial Intelligence**](https://huggingface.co/MBZUAI): For the LaMini-Flan-T5-248M language model.
+- [**AIAnytime (original author)**](https://github.com/AIAnytime): This project is a replication of AIAnytime's original project [LaMini-LM-Summarization-Streamlit-App](https://github.com/AIAnytime/LaMini-LM-Summarization-Streamlit-App). Check out the accompanying tutorial on [YouTube](https://www.youtube.com/watch?v=GIbar_kZzwk).
