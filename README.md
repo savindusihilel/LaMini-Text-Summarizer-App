@@ -13,7 +13,13 @@ Follow these steps to replicate the project in your local environment.
 
 ### Step 1: Clone the Repository
 
-Start by cloning the necessary model repository from Hugging Face:
+Start by cloning this repository
+```bash
+git clone https://github.com/savindusihilel/LaMini-Text-Summarizer-App.git
+cd LaMini-Text-Summarizer-App
+```
+
+Clone the necessary model repository from Hugging Face:
 ```bash
 git lfs install  # Ensure git-lfs is installed
 git clone https://huggingface.co/MBZUAI/LaMini-Flan-T5-248M
