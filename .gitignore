@@ -1,0 +1,6 @@
+# Ignore entire model folder
+LaMini-Flan-T5-248M/*
+
+# Data files
+data/*
+!.gitkeep  # keep the data directory
