@@ -1,6 +1,6 @@
-# Document Summarization App using Language Models
+# NewsTrimmer — News Summarization App using Language Models
 
-This project creates a simple PDF document summarization app using Streamlit and Hugging Face language models (LaMini-Flan-T5-248M). The app allows users to upload a PDF file and generate a summary while also providing sentiment analysis, keyword extraction, and topic modeling features.
+This project creates a simple news summarization app using Streamlit and Hugging Face language models (LaMini-Flan-T5-248M). The app allows users to upload a PDF file and generate a summary while also providing sentiment analysis, keyword extraction, and topic modeling features. It's fine-tuned to summarize news articles from the CNN dataset from Kaggle.
 
 ## Features
 - **PDF Upload**: Upload any PDF document for processing.
